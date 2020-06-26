@@ -144,9 +144,9 @@ if log:
   pastebin.logout()
 ```
 
-## Implementation
+## Implementations
 
-Currently working on other major implementations like:
+Currently working on other major implementations like :
 - proxy execution, especially for hiding multiples automations and preventing captcha security
 - paste gestion for connected members
 
