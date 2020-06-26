@@ -37,7 +37,30 @@ pastebin.paste("Hello world")
 
 ## Documentation
 
-*inwriting*
+### Overview
+
+| Name | Type | Arguments | Description |
+|---|---|---|---|
+| `login` | Boolean | `username`, `password` | Login to a specific pastebin account, return operation status. |
+| `logout` | Boolean | n/a | Logout from current account, return operation status. |
+| `paste` | String | `content`, `name`, `expire`, `exposure`, `formatting` | Publish a paste, return url. |
+| `proxy` | Boolean | `http`, `https` | Execute operations through proxy, return operation status. Used to hide multiple  automated operations and bypass captcha. |
+
+### `paste()`
+
+```py
+import simple_pastebin as pastebin
+
+p = pastebin.paste("Hello world", "title", expire="10M")
+print(p)
+```
+`paste(content, name, expire, exposure, formatting)`
+
+- `content`
+- `name`
+- `expire`
+- `exposure`
+- `formatting`
 
 ## License
 
