@@ -155,8 +155,8 @@ pastebin.logout()
 
 ## Implementation
 
-Currently working on other major implementation like:
-- proxy execution, especially for hiding automations and preventing captcha security
+Currently working on other major implementations like:
+- proxy execution, especially for hiding multiples automations and preventing captcha security
 - paste gestion for connected members
 
 ## License
