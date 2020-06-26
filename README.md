@@ -22,13 +22,16 @@ $ python3 -m pip install -r requirements.txt
 # get site-packages directory
 $ python3 -m site --user-site
 
-# copy script to lib site-packages directory
-$ cd -a
+# copy script to site-packages directory
+$ cd pastebin_wrapper.py {site-packages}
 ```
 
 ### Usage
 
-`import pastebin_wrapper as pastebin`
+````py
+# import library
+import pastebin_wrapper as pastebin
+```
 
 ## License
 
