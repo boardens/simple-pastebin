@@ -81,10 +81,15 @@ print(p)
 `paste(content, name, expire, exposure, formatting)`
 
 - `content`
-- `name` (optional)
-- `expire` (optional)
-- `exposure` (optional)
-- `formatting` (optional)
+  - Paste content
+- `name`
+  - Paste title (optional)
+- `expire`
+  - Paste expiration date (optional)
+- `exposure`
+  - Paste exposure status (optional)
+- `formatting`
+  - Paste code formatting (optional)
 
 ## License
 
