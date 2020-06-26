@@ -45,6 +45,8 @@ pastebin.paste("Hello world")
 | `logout` | Boolean | n/a | Logout from current account, return operation status. |
 | `paste` | String | `content`, `name`, `expire`, `exposure`, `formatting` | Publish a paste, return url. |
 
+---
+
 ### `login()`
 
 ```py
@@ -59,6 +61,8 @@ if account:
 - `username`
 - `password`
 
+---
+
 ### `logout()`
 
 ```py
@@ -70,6 +74,8 @@ if l:
   print("Logged out !")
 ```
 `logout()`
+
+---
 
 ### `paste()`
 
