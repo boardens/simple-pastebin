@@ -45,6 +45,31 @@ pastebin.paste("Hello world")
 | `logout` | Boolean | n/a | Logout from current account, return operation status. |
 | `paste` | String | `content`, `name`, `expire`, `exposure`, `formatting` | Publish a paste, return url. |
 
+### `login()`
+
+```py
+import simple_pastebin as pastebin
+
+account = pastebin.login("username", "password")
+if account:
+  print("Logged in !")
+```
+`login(username, password)`
+
+- `username`
+- `password`
+
+### `logout()`
+
+```py
+import simple_pastebin as pastebin
+
+account = pastebin.login("username", "password")
+l = pastebin.logout()
+if l:
+  print("Logged out !")
+```
+
 ### `paste()`
 
 ```py
@@ -56,10 +81,10 @@ print(p)
 `paste(content, name, expire, exposure, formatting)`
 
 - `content`
-- `name`
-- `expire`
-- `exposure`
-- `formatting`
+- `name` (optional)
+- `expire` (optional)
+- `exposure` (optional)
+- `formatting` (optional)
 
 ## License
 
