@@ -32,7 +32,7 @@ $ cp simple_pastebin.py {site-packages}
 import simple_pastebin as pastebin
 ```
 ```py
-pastebin.paste("Hello world", "title", expire="10M")
+pastebin.paste("Hello world")
 ```
 
 ## Documentation
