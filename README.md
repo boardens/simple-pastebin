@@ -28,7 +28,7 @@ $ cd pastebin_wrapper.py {site-packages}
 
 ### Usage
 
-````py
+```py
 # import library
 import pastebin_wrapper as pastebin
 ```
