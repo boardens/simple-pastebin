@@ -32,6 +32,7 @@ $ cp simple_pastebin.py {site-packages}
 import simple_pastebin as pastebin
 ```
 ```py
+# create your first paste
 pastebin.paste("Hello world")
 ```
 
