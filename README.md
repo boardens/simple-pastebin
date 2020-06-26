@@ -7,7 +7,7 @@
 
 ```bash
 # clone the repository
-$ git clone https://github.com/boardens/watson.git
+$ git clone https://github.com/boardens/simple-pastebin-wrapper.git
 
 # change the working directory to simple-pastebin-wrapper
 $ cd simple-pastebin-wrapper
@@ -23,14 +23,14 @@ $ python3 -m pip install -r requirements.txt
 $ python3 -m site --user-site
 
 # copy script to site-packages directory
-$ cd pastebin_wrapper.py {site-packages}
+$ cd simple_pastebin.py {site-packages}
 ```
 
 ### Usage
 
 ```py
 # import library
-import pastebin_wrapper as pastebin
+import simple_pastebin as pastebin
 ```
 
 ## License
