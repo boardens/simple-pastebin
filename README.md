@@ -93,21 +93,24 @@ print(p)
   - Paste expiration date (optional)
   - Default `"N"`
 
-| Value | Description |
-|---|---|
-| `"N"` | Never |
-| `"10M"` | 10 minutes |
-| `"1H"` | 1 hour |
-| `"1D"` | 1 day |
+| Value | Description | | Value | Description |
+|---|---|---|---|---|
+| `"N"` | Never | | `"2W"` | 2 weeks |
+| `"10M"` | 10 minutes | | `"1M"` | 1 month |
+| `"1H"` | 1 hour | | `"6M"` | 6 months |
+| `"1D"` | 1 day | | `"1Y"` | 1 year |
 | `"1W"` | 1 week |
-| `"2W"` | 2 weeks |
-| `"1M"` | 1 month |
-| `"6M"` | 6 months |
-| `"1Y"` | 1 year |
 
 - `exposure`
   - Paste exposure status (optional)
   - Default `"0"`
+
+| Value | Description |
+|---|---|
+| `"0"` | Public (default) |
+| `"1"` | Unlisted |
+| `"2"` | Private (members only) |
+
 - `formatting`
   - Paste code formatting (optional)
   - Default `"1"`
