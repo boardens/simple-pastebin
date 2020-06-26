@@ -69,6 +69,7 @@ l = pastebin.logout()
 if l:
   print("Logged out !")
 ```
+`logout()`
 
 ### `paste()`
 
@@ -82,6 +83,9 @@ print(p)
 
 - `content`
   - Paste content
+  
+**Optional**
+
 - `name`
   - Paste title (optional)
   - Default `""`
@@ -89,16 +93,24 @@ print(p)
   - Paste expiration date (optional)
   - Default `"N"`
 
-| | |
+| Value | Description |
 |---|---|
 | `"N"` | Never |
+| `"10M"` | 10 minutes |
+| `"1H"` | 1 hour |
+| `"1D"` | 1 day |
+| `"1W"` | 1 week |
+| `"2W"` | 2 weeks |
+| `"1M"` | 1 month |
+| `"6M"` | 6 months |
+| `"1Y"` | 1 year |
 
 - `exposure`
   - Paste exposure status (optional)
   - Default `"0"`
 - `formatting`
   - Paste code formatting (optional)
-  - Default `"N"`
+  - Default `"1"`
 
 ## License
 
