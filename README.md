@@ -23,7 +23,7 @@ $ python3 -m pip install -r requirements.txt
 $ python3 -m site --user-site
 
 # copy script to site-packages directory
-$ cd simple_pastebin.py {site-packages}
+$ cp simple_pastebin.py {site-packages}
 ```
 
 ### Usage
