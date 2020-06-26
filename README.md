@@ -139,16 +139,16 @@ password = "password"
 log = pastebin.login(username, password)
 
 if not log:
-	pastebin.proxy("46.218.155.194:3128", "46.218.155.194:3128")
-	log = pastebin.login(username, password)
+  pastebin.proxy("46.218.155.194:3128", "46.218.155.194:3128")
+  log = pastebin.login(username, password)
 
-	if log:
+  if log:
     print("Connected as "+username)
-		print(pastebin.paste("Hello world", "title", expire="10M"))
+    print(pastebin.paste("Hello world", "title", expire="10M"))
 
 else:
   print("Connected as "+username)
-	print(pastebin.paste("Hello world", "title", expire="10M"))
+  print(pastebin.paste("Hello world", "title", expire="10M"))
 
 pastebin.logout()
 ```
