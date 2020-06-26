@@ -84,12 +84,21 @@ print(p)
   - Paste content
 - `name`
   - Paste title (optional)
+  - Default `""`
 - `expire`
   - Paste expiration date (optional)
+  - Default `"N"`
+
+| | |
+|---|---|
+| `"N"` | Never |
+
 - `exposure`
   - Paste exposure status (optional)
+  - Default `"0"`
 - `formatting`
   - Paste code formatting (optional)
+  - Default `"N"`
 
 ## License
 
