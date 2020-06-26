@@ -33,6 +33,10 @@ $ cp simple_pastebin.py {site-packages}
 import simple_pastebin as pastebin
 ```
 
+## Documentation
+
+*inwriting*
+
 ## License
 
 [GPL-3.0](https://github.com/boardens/watson/LICENSE/) License
