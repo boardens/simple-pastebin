@@ -53,8 +53,8 @@ pastebin.paste("Hello world")
 ```py
 import simple_pastebin as pastebin
 
-account = pastebin.login("username", "password")
-if account:
+log = pastebin.login("username", "password")
+if log:
   print("Logged in !")
 ```
 `login(username, password)`
@@ -69,9 +69,9 @@ if account:
 ```py
 import simple_pastebin as pastebin
 
-account = pastebin.login("username", "password")
-l = pastebin.logout()
-if l:
+log = pastebin.login("username", "password")
+exit = pastebin.logout()
+if exit:
   print("Logged out !")
 ```
 `logout()`
@@ -87,6 +87,8 @@ p = pastebin.paste("Hello world", "title", expire="10M")
 print(p)
 ```
 `paste(content, name, expire, exposure, formatting)`
+
+> Note : if you create a paste without logging in, it will be anonymous.
 
 - `content`
   - Paste content
@@ -125,6 +127,37 @@ print(p)
 - `formatting`
   - Paste code formatting (optional)
   - Default `"1"`
+
+### Examples
+
+```py
+import simple_pastebin as pastebin
+
+username = "username"
+password = "password"
+
+log = pastebin.login(username, password)
+
+if not log:
+	pastebin.proxy("46.218.155.194:3128", "46.218.155.194:3128")
+	log = pastebin.login(username, password)
+
+	if log:
+    print("Connected as "+username)
+		print(pastebin.paste("Hello world", "title", expire="10M"))
+
+else:
+  print("Connected as "+username)
+	print(pastebin.paste("Hello world", "title", expire="10M"))
+
+pastebin.logout()
+```
+
+## Implementation
+
+Currently working on other major implementation like:
+- proxy execution, especially for hiding automations and preventing captcha security
+- paste gestion for connected members
 
 ## License
 
