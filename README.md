@@ -45,13 +45,6 @@ pastebin.paste("Hello world")
 
 ## Documentation
 
-<style>
-table {
-    display:table;
-    width:100%;
-}
-</style>
-
 ### Overview
 
 | Name | Type | Arguments | Description |
