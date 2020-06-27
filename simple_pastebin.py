@@ -2,6 +2,8 @@ import mechanize
 
 __version__ = "1.0.0"
 
+br = mechanize.Browser()
+
 def login(username, password):
 	br.open("https://pastebin.com/login/")
 	formcount = 0
