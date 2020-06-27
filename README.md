@@ -109,7 +109,7 @@ print(p)
   - Paste expiration date (optional)
   - Default `"N"`
 
-| <div style="width:350%">Value</div> | <div style="width:650%">Description</div> |
+| Value | Description |
 |---|---|
 | `"N"` | Never |
 | `"10M"` | 10 minutes |
