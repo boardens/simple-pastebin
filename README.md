@@ -66,8 +66,8 @@ if log:
 ```
 `login(username, password)`
 
-- `username`
-- `password`
+- `username` (string)
+- `password` (string)
 
 ---
 
@@ -97,21 +97,19 @@ print(p)
 
 > Note : if you create a paste without logging in, it will be anonymous.
 
-- `content`
+- `content` (string)
   - Paste content
   
 **Optional**
 
-- `name`
-  - Paste title (optional)
-  - Default `""`
-- `expire`
-  - Paste expiration date (optional)
-  - Default `"N"`
+- `name` (string)
+  - Paste title
+- `expire` (string from list)
+  - Paste expiration date
 
 | Value | Description |
 |---|---|
-| `"N"` | Never |
+| `"N"` | Never (default) |
 | `"10M"` | 10 minutes |
 | `"1H"` | 1 hour |
 | `"1D"` | 1 day |
@@ -121,19 +119,21 @@ print(p)
 | `"6M"` | 6 months |
 | `"1Y"` | 1 year |
 
-- `exposure`
-  - Paste exposure status (optional)
-  - Default `"0"`
+- `exposure` (string from list)
+  - Paste exposure status
 
-| Value | Description |
-|---|---|
-| `"0"` | Public (default) |
-| `"1"` | Unlisted |
-| `"2"` | Private (members only) |
+| Id | Value | Description |
+|---|---|---|
+| `"0"` | `"public"` | Public (default) |
+| `"1"` | `"unlisted"` | Unlisted |
+| `"2"` | `"private"` | Private (members only) |
 
-- `formatting`
-  - Paste code formatting (optional)
-  - Default `"1"`
+- `formatting` (string from list)
+  - Paste code formatting
+
+| Id | Value | Description |
+|---|---|---|
+| `"1"` | `"none"` | None (default) |
 
 ### Examples
 
