@@ -122,8 +122,6 @@ print(p)
 - `exposure` (string from list)
   - Paste exposure status
 
-> ⚠️ These values are not currently implemented, use ids instead.
-
 | Id | Value | Description |
 |---|---|---|
 | `"0"` | `"public"` | Public (default) |
