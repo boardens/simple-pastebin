@@ -1,5 +1,5 @@
 # simple-pastebin-wrapper
-📝 Simple pastebin unofficial wrapper based on web automations.
+🧷 Simple pastebin unofficial wrapper based on web automations.
 
 ## Get started
 
