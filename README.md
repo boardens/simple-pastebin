@@ -154,8 +154,9 @@ if log:
 ## Implementations
 
 Currently working on other major implementations like :
-- proxy execution, especially for hiding multiples automations and preventing captcha security
-- paste gestion for connected members
+- hiding multiples automations and preventing captcha security behind proxies
+- improving and simplifying functions argumentations
+- adding paste gestion for connected members
 
 ## License
 
