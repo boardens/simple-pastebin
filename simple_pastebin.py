@@ -2,6 +2,7 @@ import mechanize
 
 __version__ = "1.0.0"
 
+exposure_values = ["public", "unlisted", "private"]
 br = mechanize.Browser()
 
 def login(username, password):
@@ -31,6 +32,8 @@ def logout():
 		return False
 
 def paste(content, name="", expire="N", exposure="0", formatting="1"):
+	if exposure in exposure_values:
+		exposure = str(exposure_values.index(exposure))
 	br.open("https://pastebin.com/")
 	br.select_form("myform")
 	br["paste_code"] = content
