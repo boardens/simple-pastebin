@@ -122,7 +122,7 @@ print(p)
 - `exposure` (string from list)
   - Paste exposure status
 
-> Values ares currently not implemented, use id instead.
+> ⚠️ These values are not currently implemented, use ids instead.
 
 | Id | Value | Description |
 |---|---|---|
@@ -133,7 +133,7 @@ print(p)
 - `formatting` (string from list)
   - Paste code formatting
 
-> Values ares currently not implemented, use id instead.
+> ⚠️ These values are not currently implemented, use ids instead.
 
 | Id | Value | Description |
 |---|---|---|
