@@ -1,5 +1,8 @@
 import mechanize
 
+module_name = "Simple Pastebin"
+__version__ = "1.0.0"
+
 def login(username, password):
 	br.open("https://pastebin.com/login/")
 	formcount = 0
