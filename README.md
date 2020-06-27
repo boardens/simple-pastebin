@@ -131,7 +131,7 @@ print(p)
 | `"2"` | `"private"` | Private (members only) |
 
 - `formatting` (string from list)
-  - Paste code formatting
+  - Paste code synthax formatting
 
 > ⚠️ These values are not currently implemented, use ids instead.
 
