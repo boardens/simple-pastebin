@@ -1,7 +1,7 @@
 # simple-pastebin-wrapper
 🧷 Simple pastebin unofficial wrapper based on web automations.
 
-> Interact with pastebin without API key or token.
+> Interact with pastebin without any API key or token.
 
 - Paste, either logged in or anonymously
 - 200+ selectable languages for syntax highlighting
