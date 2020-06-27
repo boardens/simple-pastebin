@@ -1,6 +1,13 @@
 # simple-pastebin-wrapper
 🧷 Simple pastebin unofficial wrapper based on web automations.
 
+> Interact with pastebin without API key or token.
+
+- Paste, either logged in or anonymously
+- 200+ selectable languages for syntax highlighting
+- Set expiry times on pastes
+- Set public/private/unlisted status for pastes
+
 ## Get started
 
 **Note** : Python 3.6 or higher is required.
