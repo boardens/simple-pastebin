@@ -123,7 +123,7 @@ print(p)
 | `"6M"` | 6 months |
 | `"1Y"` | 1 year |
 
-- `exposure` (string from list)
+- `exposure` (int, string from list)
   - Paste exposure status
 
 | Id | Value | Description |
@@ -132,7 +132,7 @@ print(p)
 | `1` | `"unlisted"` | Unlisted |
 | `2` | `"private"` | Private (members only) |
 
-- `formatting` (string from list)
+- `formatting` (int, string from list)
   - Paste code formatting
 
 > ⚠️ These values are not currently implemented, use ids instead.
