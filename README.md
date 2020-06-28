@@ -24,6 +24,11 @@ $ cd simple-pastebin-wrapper
 # install the requirements
 $ python3 -m pip install -r requirements.txt
 ```
+
+### Installation
+
+> Currently working on a setup file to facilitate installation.
+
 ```bash
 # get site-packages directory
 $ python3 -m site --user-site
@@ -37,8 +42,7 @@ $ cp simple_pastebin.py {site-packages}
 ```py
 # import library
 import simple_pastebin as pastebin
-```
-```py
+
 # create your first paste
 pastebin.paste("Hello world")
 ```
