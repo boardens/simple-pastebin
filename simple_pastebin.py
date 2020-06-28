@@ -30,16 +30,16 @@ def logout():
 	except Exception:
 		return False
 
-def paste(content, name="", expire="N", exposure="0", formatting="1"):
+def paste(content, name="", expire="N", exposure=0, formatting=1):
 	exposure_values = ["public", "unlisted", "private"]
 	if exposure in exposure_values:
-		exposure = str(exposure_values.index(exposure))
+		exposure = exposure_values.index(exposure)
 	br.open("https://pastebin.com/")
 	br.select_form("myform")
 	br["paste_code"] = content
-	br["paste_format"] = [formatting]
+	br["paste_format"] = [str(formatting)]
 	br["paste_expire_date"] = [expire]
-	br["paste_private"] = [exposure]
+	br["paste_private"] = [str(exposure)]
 	br["paste_name"] = name
 	br.submit()
 	return br.geturl()
