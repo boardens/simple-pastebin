@@ -4,6 +4,69 @@ __version__ = "1.0.0"
 
 br = mechanize.Browser()
 
+exposure_values = [
+	"public",
+	"unlisted",
+	"private"
+	]
+
+format_values = ["",
+	"text", "actionscript", "ada", "apache", "applescript",
+	"arm_nasm", "asp", "bash", "c", "c_mac",
+	"caddcl", "cadlisp", "cpp", "csharp", "coldfusion",
+	"css", "d", "delphi", "diff", "batch",
+	"eiffel", "fortran", "freebasic", "gml", "html4strict",
+	"ini", "java", "javascript", "lisp", "lua",
+	"", "mpasm", "mysql", "nsis", "objc",
+	"ocaml", "oobas", "oracle8", "pascal", "perl",
+	"php", "python", "qbasic", "robots", "ruby",
+	"scheme", "smarty", "sql", "", "vb",
+	"vbnet", "visualprofox", "xml", "autolt", "blitzbasic",
+	"bnf", "erlang", "genero", "groovy", "haskell",
+	"inno", "latex", "lsl2", "matlab", "m68k",
+	"mirc", "rails", "plsql", "smalltalk", "tcl",
+	"", "z80", "abap", "actionscript3", "apt_sources",
+	"avisynth", "basic4gl", "bibtex", "bf", "boo",
+	"cfdg", "cil", "cmake", "cobol", "dcs",
+	"div", "dot", "email", "fo", "gettext",
+	"glsl", "gnuplot", "hq9plus", "idl", "intercal",
+	"io", "java5", "kixtart", "klonec", "klonecpp",
+	"locobasic", "lolcode", "lotusformula", "lotusscript", "lscript",
+	"make", "modula3", "mxml", "oberon2", "ocaml_brief",
+	"oracle11", "per", "php_brief", "pic16", "pixelblender",
+	"povray", "powershell", "progress", "prolog", "properties",
+	"providex", "rebol", "reg", "sas", "scala",
+	"scilab", "sdlbasic", "terarerm", "thinbasic", "tsql",
+	"typoscript", "verilog", "vhdl", "vim", "visualprolog",
+	"whitespace", "whois", "winbatch", "xorg_conf", "xpp",
+	"pawn", "4cs", "6502acme", "6502kickass", "6502tasm",
+	"68000devpac", "algol68", "autoconf", "autohotkey", "awk",
+	"cuesheet", "chaiscript", "clojure", "cpp_qt", "e",
+	"ecmascript", "f1", "fsharp", "gambas", "gdb",
+	"genie", "go", "gwbasic", "hicest", "icon",
+	"j", "jquery", "lb", "logtalk", "magiksf",
+	"mapbasic", "mmix", "modula2", "newlisp", "objecl",
+	"", "oxygene", "oz", "pcre", "perl6",
+	"pf", "pike", "postgresql", "powerbuilder", "purebasic",
+	"q", "rpmspec", "rplus", "systemverilog", "",
+	"unicon", "vala", "xbasic", "zxbasic", "uscript",
+	"html5", "proftpd", "bascomavr", "c_loadrunner", "coffeescript",
+	"epc", "falcon", "llvm", "pycon", "yalm",
+	"freeswitch", "", "", "", "",
+	"", "", "", "", "",
+	"", "arm", "asymptote", "dcl", "dcpu16",
+	"haxe", "ldif", "nagios", "octave", "parasail",
+	"parigp", "pys60", "rexx", "spark", "sparql",
+	"stonescript", "upc", "urbi", "vedit", "",
+	"aimms", "chapel", "dart", "easytrieve", "ispf",
+	"jcl", "nginx", "nim", "postscript", "qml",
+	"racket", "rbscript", "rust", "scl", "standardml",
+	"vbs", "c_winapi", "cpp_winapi", "netrexx", "json",
+	"swift", "supercollider", "julia", "blitz3d", "blitzmax",
+	"sqf", "puppet", "filemaker", "euphoria", "pli",
+	"oorexx", "markdown", "kotlin", "ceylon", "arduino"
+	]
+
 def login(username, password):
 	br.open("https://pastebin.com/login/")
 	formcount = 0
@@ -31,7 +94,12 @@ def logout():
 		return False
 
 def paste(content, name="", expire="N", exposure=0, formatting=1):
-	exposure_values = ["public", "unlisted", "private"]
+	if formatting == "":
+		formatting = 1
+	if formatting in format_values:
+		formatting = format_values.index(formatting)
+	if exposure == "":
+		exposure = 0
 	if exposure in exposure_values:
 		exposure = exposure_values.index(exposure)
 	br.open("https://pastebin.com/")
