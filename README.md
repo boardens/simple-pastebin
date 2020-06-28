@@ -135,8 +135,6 @@ print(p)
 - `formatting` (int, string from list)
   - Paste code formatting
 
-> ⚠️ These values are not currently implemented, use ids instead.
-
 | Id | Value | Description |
 |---|---|---|
 | `1` | `"text"` | None (default) |
@@ -393,6 +391,11 @@ print(p)
 | `205` | `"yalm"` | YALM |
 | `72` | `"z80"` | Z80 Assembler |
 | `194` | `"zxbasic"` | ZXBasic |
+
+> ⚠️ The following Ids are not responding to any item :
+
+> `0` `31` `49` `71` `176` `207` `208` `209` `210`<br>
+> `211` `212` `213` `214` `215` `216` `235`
 
 ---
 
