@@ -98,8 +98,8 @@ def paste(content, name="", expire="N", exposure=0, formatting=1):
 		formatting = 1
 	if formatting in format_values:
 		formatting = format_values.index(formatting)
-	if exposure == "":
-		exposure = 0
+#	if exposure == "":
+#		exposure = 0
 	if exposure in exposure_values:
 		exposure = exposure_values.index(exposure)
 	br.open("https://pastebin.com/")
