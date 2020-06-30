@@ -178,8 +178,8 @@ print(p)
 | `82` | `"cil"` | C intermediate Language |
 | `14` | `"csharp"` | C# |
 | `13` | `"cpp"` | C++ |
-| `253` | `"cpp_winapi"` | C++ (WinAPI) |
-| `154` | `"cpp_qt"` | C++ (with Qt extensions) |
+| `253` | `"cpp-winapi"` | C++ (WinAPI) |
+| `154` | `"cpp-qt"` | C++ (with Qt extensions) |
 | `199` | `"c_loadrunner"` | C: Loadrunner |
 | `11` | `"caddcl"` | CAD DCL |
 | `12` | `"cadlisp"` | CAD Lisp |
