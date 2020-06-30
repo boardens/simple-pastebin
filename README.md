@@ -7,6 +7,7 @@
 - 200+ selectable languages for syntax highlighting
 - Set expiry times on pastes
 - Set public/private/unlisted status for pastes
+- See pastes by a particular user
 
 ## Get started
 
@@ -53,9 +54,10 @@ pastebin.paste("Hello world")
 
 | Name | Type | Arguments | Description |
 |---|---|---|---|
-| `login` | Boolean | `username`, `password` | Login to a specific pastebin account, return operation status. |
-| `logout` | Boolean | n/a | Logout from current account, return operation status. |
-| `paste` | String | `content`, `name`, `expire`, `exposure`, `formatting` | Publish a paste, return url. |
+| [`login`](#login) | Boolean | `username`, `password` | Login to a specific pastebin account, return operation status. |
+| [`logout`](#logout) | Boolean | n/a | Logout from current account, return operation status. |
+| [`list`](#list) | String (list) | `username` | List all pastes by username, return list. |
+| [`paste`](#paste) | String | `content`, `name`, `expire`, `exposure`, `formatting` | Publish a paste, return url. |
 
 ---
 
@@ -86,6 +88,25 @@ if exit:
   print("Logged out !")
 ```
 `logout()`
+
+---
+
+### `list()`
+
+```py
+import simple_pastebin as pastebin
+
+l = pastebin.list("username")
+print(l)
+```
+`list(username)`
+
+- `username` (string)
+
+```bash
+# Output format :
+[[key, title, date, expire, hits, formatting], ...]
+```
 
 ---
 
