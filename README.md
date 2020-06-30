@@ -274,7 +274,7 @@ print(p)
 | `267` | `"markdown"` | Markdown (PRO members only) |
 | `64` | `"matlab"` | MatLab |
 | `66` | `"mirc"` | mIRC |
-| `172` | `mmix""` | MIX Assembler |
+| `172` | `"mmix"` | MIX Assembler |
 | `173` | `"modula2"` | Modula 2 |
 | `107` | `"modula3"` | Modula 3 |
 | `146` | `"68000devpac"` | Motorola 68000 HiSoft Dev |
