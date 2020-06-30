@@ -4,6 +4,12 @@ __version__ = "1.0.0"
 
 br = mechanize.Browser()
 
+expire_values = [
+	"N", "10M", "1H",
+	"1D", "1W", "2W",
+	"1M", "6M", "1Y"
+	]
+
 exposure_values = [
 	"public",
 	"unlisted",
