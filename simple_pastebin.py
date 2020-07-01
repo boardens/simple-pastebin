@@ -120,7 +120,7 @@ def paste(content, name="", expire="N", exposure=0, formatting=1):
 	br.submit()
 	return br.geturl()
 
-def list(username):
+def user_list(username):
 	soup = BeautifulSoup(urlopen("https://pastebin.com/u/"+username), features="html5lib")
 	content = []
 	table = soup.find('table', attrs={'class':'maintable'})
