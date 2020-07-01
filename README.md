@@ -60,10 +60,10 @@ pastebin.paste("Hello world")
 
 | Name | Type | Arguments | Description |
 |---|---|---|---|
-| [`login`](#login) | Boolean | `username`, `password` | Login to a specific pastebin account, return operation status. |
+| [`login`](#login) | Boolean | `username` `password` | Login to a specific pastebin account, return operation status. |
 | [`logout`](#logout) | Boolean | n/a | Logout from current account, return operation status. |
 | [`list`](#list) | String (list) | `username` | List all pastes by username, return list. |
-| [`paste`](#paste) | String | `content`, `name`, `expire`, `exposure`, `formatting` | Publish a paste, return url. |
+| [`paste`](#paste) | String | `content` `name` `expire` `exposure` `formatting` | Publish a paste, return url. |
 
 ---
 
