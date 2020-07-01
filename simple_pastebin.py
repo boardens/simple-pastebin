@@ -117,3 +117,20 @@ def paste(content, name="", expire="N", exposure=0, formatting=1):
 	br["paste_name"] = name
 	br.submit()
 	return br.geturl()
+
+def list(username):
+	soup = BeautifulSoup(urlopen("https://pastebin.com/u/"+username), features="html5lib")
+	content = []
+	table = soup.find('table', attrs={'class':'maintable'})
+	table_body = table.find('tbody')
+	rows = table_body.find_all('tr')
+
+	for row in rows:
+		cols = row.find_all('td')
+		cols = [ele.text.strip() for ele in cols][:-1]
+#		cols.insert(0, key)
+		content.append([ele for ele in cols if ele])
+
+	content = content[1:]
+	return content
+
