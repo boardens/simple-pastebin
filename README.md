@@ -105,7 +105,7 @@ print(l)
 
 ```bash
 # Output format :
-[[key, title, date, expire, hits, formatting], ...]
+[[key, name, date, expire, hits, formatting], ...]
 ```
 
 ---
