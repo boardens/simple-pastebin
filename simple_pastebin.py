@@ -120,7 +120,7 @@ def paste(content, name="", expire="N", exposure=0, formatting=1):
 	br.submit()
 	return br.geturl()
 
-def user_list(username):
+def user_list(username, result_limit=None):
 	soup = BeautifulSoup(urlopen("https://pastebin.com/u/"+username), features="html5lib")
 	content = []
 	table = soup.find('table', attrs={'class':'maintable'})
@@ -138,4 +138,7 @@ def user_list(username):
 		content.append([ele for ele in cols if ele])
 
 	content = content[1:]
+	if result_limit != None:
+		del content[result_limit+1:len(content)]
+
 	return content
