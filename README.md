@@ -138,6 +138,8 @@ print(p)
 - `expire` (string from list)
   - Paste expiration date
 
+> get `expire_values`
+
 | Value | Description |
 |---|---|
 | `"N"` | Never (default) |
@@ -153,6 +155,8 @@ print(p)
 - `exposure` (int, string from list)
   - Paste exposure status
 
+> get `exposure_values`
+
 | Id | Value | Description |
 |---|---|---|
 | `0` | `"public"` | Public (default) |
@@ -161,6 +165,8 @@ print(p)
 
 - `formatting` (int, string from list)
   - Paste code formatting
+
+> get `format_values`
 
 | Id | Value | Description |
 |---|---|---|
