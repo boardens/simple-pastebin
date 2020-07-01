@@ -419,7 +419,7 @@ print(p)
 | `72` | `"z80"` | Z80 Assembler |
 | `194` | `"zxbasic"` | ZXBasic |
 
-> ⚠️ The following Ids are not responding to any item :
+> ⚠️ The following ids are not responding to any item :
 
 > `0` `31` `49` `71` `176` `207` `208` `209` `210`<br>
 > `211` `212` `213` `214` `215` `216` `235`
@@ -463,7 +463,7 @@ if log:
 
 Currently working on other major implementations like :
 - Hiding multiples automations and preventing captcha security behind proxies
-- Improving and simplifying functions argumentations (especially id and values)
+- Improving and simplifying functions argumentations (especially ids and values)
 - Adding paste gestion for connected members
 
 ## License
