@@ -16,22 +16,22 @@ exposure_values = [
 	"private"
 	]
 
-format_values = ["",
+format_values = [None,
 	"text", "actionscript", "ada", "apache", "applescript",
 	"arm_nasm", "asp", "bash", "c", "c_mac",
 	"caddcl", "cadlisp", "cpp", "csharp", "coldfusion",
 	"css", "d", "delphi", "diff", "batch",
 	"eiffel", "fortran", "freebasic", "gml", "html4strict",
 	"ini", "java", "javascript", "lisp", "lua",
-	"", "mpasm", "mysql", "nsis", "objc",
+	None, "mpasm", "mysql", "nsis", "objc",
 	"ocaml", "oobas", "oracle8", "pascal", "perl",
 	"php", "python", "qbasic", "robots", "ruby",
-	"scheme", "smarty", "sql", "", "vb",
+	"scheme", "smarty", "sql", None, "vb",
 	"vbnet", "visualprofox", "xml", "autolt", "blitzbasic",
 	"bnf", "erlang", "genero", "groovy", "haskell",
 	"inno", "latex", "lsl2", "matlab", "m68k",
 	"mirc", "rails", "plsql", "smalltalk", "tcl",
-	"", "z80", "abap", "actionscript3", "apt_sources",
+	None, "z80", "abap", "actionscript3", "apt_sources",
 	"avisynth", "basic4gl", "bibtex", "bf", "boo",
 	"cfdg", "cil", "cmake", "cobol", "dcs",
 	"div", "dot", "email", "fo", "gettext",
@@ -52,18 +52,18 @@ format_values = ["",
 	"genie", "go", "gwbasic", "hicest", "icon",
 	"j", "jquery", "lb", "logtalk", "magiksf",
 	"mapbasic", "mmix", "modula2", "newlisp", "objecl",
-	"", "oxygene", "oz", "pcre", "perl6",
+	None, "oxygene", "oz", "pcre", "perl6",
 	"pf", "pike", "postgresql", "powerbuilder", "purebasic",
-	"q", "rpmspec", "rplus", "systemverilog", "",
+	"q", "rpmspec", "rplus", "systemverilog", None,
 	"unicon", "vala", "xbasic", "zxbasic", "uscript",
 	"html5", "proftpd", "bascomavr", "c_loadrunner", "coffeescript",
 	"epc", "falcon", "llvm", "pycon", "yalm",
-	"freeswitch", "", "", "", "",
-	"", "", "", "", "",
-	"", "arm", "asymptote", "dcl", "dcpu16",
+	"freeswitch", None, None, None, None,
+	None, None, None, None, None,
+	None, "arm", "asymptote", "dcl", "dcpu16",
 	"haxe", "ldif", "nagios", "octave", "parasail",
 	"parigp", "pys60", "rexx", "spark", "sparql",
-	"stonescript", "upc", "urbi", "vedit", "",
+	"stonescript", "upc", "urbi", "vedit", None,
 	"aimms", "chapel", "dart", "easytrieve", "ispf",
 	"jcl", "nginx", "nim", "postscript", "qml",
 	"racket", "rbscript", "rust", "scl", "standardml",
@@ -100,7 +100,7 @@ def logout():
 		return False
 
 def paste(content, name="", expire="N", exposure=0, formatting=1):
-	if formatting == "":
+	if formatting is None:
 		formatting = 1
 	if formatting in format_values:
 		formatting = format_values.index(formatting)
