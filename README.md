@@ -435,6 +435,23 @@ if log:
   print(pastebin.paste("Hello world", "title", expire="10M"))
   pastebin.logout()
 ```
+```py
+import simple_pastebin as pastebin
+
+username = "username"
+password = "password"
+
+log = pastebin.login(username, password)
+
+if log:
+  print("Connected as "+username)
+  p = pastebin.list(username)
+
+  for i in range(len(p)):
+    print(p[i][1])
+
+  pastebin.logout()
+```
 
 ## Implementations
 
