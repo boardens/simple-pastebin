@@ -63,7 +63,7 @@ pastebin.paste("Hello world")
 |---|---|---|---|
 | [`login`](#login) | Boolean | `username` `password` | Login to a specific pastebin account, return operation status. |
 | [`logout`](#logout) | Boolean | n/a | Logout from current account, return operation status. |
-| [`user_list`](#user_list) | String (list) | `username` | List all pastes by username, return list. |
+| [`user_list`](#user_list) | String (list) | `username` `result_limit` | List all pastes by username, return list. |
 | [`paste`](#paste) | String | `content` `name` `expire` `exposure` `formatting` | Publish a paste, return url. |
 
 ---
@@ -108,11 +108,17 @@ import simple_pastebin as pastebin
 list = pastebin.user_list("username")
 print(list)
 ```
-`user_list(username)`
+`user_list(username, user_limit)`
 
 | Argument | Type | Description |
 |---|---|---|
 | `username` | String | Pastebin account username. |
+
+#### Optional
+
+| Argument | Type | Description |
+|---|---|---|
+| `result_limit` | Integer | Paste result return limit. |
 
 #### Output
 
