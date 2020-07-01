@@ -1,7 +1,8 @@
 # simple-pastebin-wrapper
 🧷 Simple pastebin unofficial wrapper based on web automations.
 
-> Interact with pastebin without any API key or token.
+> Interact with pastebin without any API key or token.<br>
+> Lightweight alternative to [PyPI Pastebin API](https://pypi.org/project/Pastebin/).
 
 - Paste, either logged in or anonymously
 - 200+ selectable languages for syntax highlighting
@@ -78,8 +79,10 @@ if log:
 ```
 `login(username, password)`
 
-- `username` (string)
-- `password` (string)
+| Argument | Type | Description |
+|---|---|---|
+| `username` | String | Pastebin account username. |
+| `password` | String | Pastebin account password. |
 
 ---
 
@@ -107,10 +110,14 @@ print(l)
 ```
 `list(username)`
 
-- `username` (string)
+| Argument | Type | Description |
+|---|---|---|
+| `username` | String | Pastebin account username. |
+
+#### Output
 
 ```bash
-# Output format :
+# Output as list format :
 [[key, name, date, expire, hits, formatting], ...]
 ```
 
@@ -128,15 +135,20 @@ print(p)
 
 > Note : if you create a paste without logging in, it will be anonymous.
 
-- `content` (string)
-  - Paste content
-  
-**Optional**
+| Argument | Type | Description |
+|---|---|---|
+| `content` | String | Paste content. |
 
-- `name` (string)
-  - Paste title
-- `expire` (string from list)
-  - Paste expiration date
+#### Optional
+
+| Argument | Type | Description |
+|---|---|---|
+| `name` | String | Paste title. |
+| `expire` | String | Paste expiration delay. |
+| `exposure` | Integer, string | Paste exposure status. |
+| `formatting` | Integer, string | Paste code formatting. |
+
+#### Valid `expire` values
 
 > get `expire_values`
 
@@ -152,8 +164,7 @@ print(p)
 | `"6M"` | 6 months |
 | `"1Y"` | 1 year |
 
-- `exposure` (int, string from list)
-  - Paste exposure status
+#### Valid `exposure` values and ids
 
 > get `exposure_values`
 
@@ -163,8 +174,7 @@ print(p)
 | `1` | `"unlisted"` | Unlisted |
 | `2` | `"private"` | Private (members only) |
 
-- `formatting` (int, string from list)
-  - Paste code formatting
+#### Valid `formatting` values and ids
 
 > get `format_values`
 
