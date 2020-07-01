@@ -139,6 +139,6 @@ def user_list(username, result_limit=None):
 
 	content = content[1:]
 	if result_limit != None:
-		del content[result_limit+1:len(content)]
+		del content[result_limit:len(content)]
 
 	return content
