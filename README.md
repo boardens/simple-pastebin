@@ -9,6 +9,12 @@
 - Set public/private/unlisted status for pastes
 - See pastes by a particular user
 
+### Soonly added
+
+- See trending/recents pastes
+- Delete your pastes
+- Retrieve your user details
+
 ## Get started
 
 **Note** : Python 3.6 or higher is required.
@@ -456,9 +462,9 @@ if log:
 ## Implementations
 
 Currently working on other major implementations like :
-- hiding multiples automations and preventing captcha security behind proxies
-- improving and simplifying functions argumentations (especially id and values)
-- adding paste gestion for connected members
+- Hiding multiples automations and preventing captcha security behind proxies
+- Improving and simplifying functions argumentations (especially id and values)
+- Adding paste gestion for connected members
 
 ## License
 
