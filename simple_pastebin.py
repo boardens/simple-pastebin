@@ -1,3 +1,5 @@
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
 import mechanize
 
 __version__ = "1.0.0"
