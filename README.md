@@ -105,10 +105,10 @@ if exit:
 ```py
 import simple_pastebin as pastebin
 
-list = pastebin.user_list("username")
+list = pastebin.user_list("username", result_limit=5)
 print(list)
 ```
-`user_list(username, user_limit)`
+`user_list(username, result_limit)`
 
 | Argument | Type | Description |
 |---|---|---|
