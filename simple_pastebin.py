@@ -128,9 +128,12 @@ def list(username):
 	for row in rows:
 		cols = row.find_all('td')
 		cols = [ele.text.strip() for ele in cols][:-1]
-#		cols.insert(0, key)
+
+		for a in row.find_all('a', href=True)[:-1]:
+			if a.text:
+				cols.insert(0, a['href'][1:])
+
 		content.append([ele for ele in cols if ele])
 
 	content = content[1:]
 	return content
-
