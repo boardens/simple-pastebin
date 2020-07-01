@@ -63,7 +63,7 @@ pastebin.paste("Hello world")
 |---|---|---|---|
 | [`login`](#login) | Boolean | `username` `password` | Login to a specific pastebin account, return operation status. |
 | [`logout`](#logout) | Boolean | n/a | Logout from current account, return operation status. |
-| [`list`](#list) | String (list) | `username` | List all pastes by username, return list. |
+| [`user_list`](#user_list) | String (list) | `username` | List all pastes by username, return list. |
 | [`paste`](#paste) | String | `content` `name` `expire` `exposure` `formatting` | Publish a paste, return url. |
 
 ---
@@ -100,15 +100,15 @@ if exit:
 
 ---
 
-### `list()`
+### `user_list()`
 
 ```py
 import simple_pastebin as pastebin
 
-l = pastebin.list("username")
-print(l)
+list = pastebin.user_list("username")
+print(list)
 ```
-`list(username)`
+`user_list(username)`
 
 | Argument | Type | Description |
 |---|---|---|
@@ -467,10 +467,10 @@ log = pastebin.login(username, password)
 
 if log:
   print("Connected as "+username)
-  p = pastebin.list(username)
+  list = pastebin.user_list(username)
 
-  for i in range(len(p)):
-    print(p[i][1])
+  for i in range(len(list)):
+    print(list[i][1])
 
   pastebin.logout()
 ```
