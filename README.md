@@ -64,6 +64,7 @@ pastebin.paste("Hello world")
 | [`login`](#login) | Boolean | `username` `password` | Login to a specific pastebin account, return operation status. |
 | [`logout`](#logout) | Boolean | n/a | Logout from current account, return operation status. |
 | [`user_list`](#user_list) | String (list) | `username` `result_limit` | List all pastes by username, return list. |
+| [`user_details`](#user_details) | String (list) | `username` | List all details by username, return list. |
 | [`paste`](#paste) | String | `content` `name` `expire` `exposure` `formatting` | Publish a paste, return url. |
 | [`paste_details`](#paste_details) | String (list) | `key` | List all details by paste, return list. |
 | [`paste_content`](#paste_content) | String | `key` | Get paste raw content, return content. |
@@ -127,6 +128,29 @@ print(list)
 ```bash
 # Output as list format :
 [[key, name, date, expire, hits, formatting], ...]
+```
+
+---
+
+### `user_details()`
+
+```py
+import simple_pastebin as pastebin
+
+list = pastebin.user_details("username")
+print(list)
+```
+`user_details(username)`
+
+| Argument | Type | Description |
+|---|---|---|
+| `username` | String | Pastebin account username. |
+
+#### Output
+
+```bash
+# Output as list format :
+[account_hits, total_hits, registry_date]
 ```
 
 ---
