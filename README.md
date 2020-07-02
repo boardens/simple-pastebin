@@ -468,7 +468,7 @@ print(list)
 
 ```bash
 # Output as list format :
-[[name, username, date, expire, hits, formatting, size], ...]
+[name, username, date, expire, hits, formatting, size]
 ```
 
 ---
