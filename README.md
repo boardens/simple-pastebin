@@ -95,7 +95,7 @@ if log:
 ```py
 import simple_pastebin as pastebin
 
-log = pastebin.login("username", "password")
+pastebin.login("username", "password")
 exit = pastebin.logout()
 if exit:
   print("Logged out !")
@@ -519,10 +519,10 @@ print(content)
 ```py
 import simple_pastebin as pastebin
 
-if pastebin.logged:
-  del = pastebin.paste_delete("kJApGqbK")
-  if del:
-    print("Paste deleted !")
+pastebin.login("username", "password")
+delete = pastebin.paste_delete("kJApGqbK")
+if delete:
+  print("Paste deleted !")
 ```
 `paste_delete(key)`
 
