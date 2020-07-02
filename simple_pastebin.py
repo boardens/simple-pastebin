@@ -155,3 +155,8 @@ def paste_details(key):
 	content.append(soup.find_all("a", {"class":"buttonsm"})[6].text)
 	content.append((soup.find("span", {"class":"h_640"}).next_sibling)[:-4].replace(' ', ''))
 	return content
+
+def paste_content(key):
+	content = urlopen("https://pastebin.com/raw/"+key).read()
+	content = content.decode("utf-8")
+	return content
