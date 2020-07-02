@@ -4,17 +4,16 @@
 > Interact with pastebin without any API key or token.<br>
 > Lightweight alternative to [PyPI Pastebin API](https://pypi.org/project/Pastebin/).
 
+### Features
+
 - Paste, either logged in or anonymously
 - 200+ selectable languages for syntax highlighting
 - Set expiry times on pastes
 - Set public/private/unlisted status for pastes
+- See trending/recents pastes
 - See pastes by a particular user
 - Delete your pastes
 - Retrieve your user details
-
-### Soonly added
-
-- See trending/recents pastes
 
 ## Get started
 
