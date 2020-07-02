@@ -152,7 +152,7 @@ print(list)
 
 ```bash
 # Output as list format :
-[account_hits, total_hits, registry_date]
+[account_hits, total_hits, registry_date, profile_picture]
 ```
 
 ---
