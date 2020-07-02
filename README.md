@@ -68,6 +68,7 @@ pastebin.paste("Hello world")
 | [`paste`](#paste) | String | `content` `name` `expire` `exposure` `formatting` | Publish a paste, return url. |
 | [`paste_details`](#paste_details) | String (list) | `key` | List all details by paste, return list. |
 | [`paste_content`](#paste_content) | String | `key` | Get paste raw content, return content. |
+| [`paste_delete`](#paste_delete) | Boolean | `key` | Delete a paste (if logged), return operation status. |
 
 ---
 
@@ -506,6 +507,24 @@ content = pastebin.paste_content("kJApGqbK")
 print(content)
 ```
 `paste_content(key)`
+
+| Argument | Type | Description |
+|---|---|---|
+| `key` | String | Paste url key. |
+
+---
+
+### `paste_delete()`
+
+```py
+import simple_pastebin as pastebin
+
+if pastebin.logged:
+  del = pastebin.paste_delete("kJApGqbK")
+  if del:
+    print("Paste deleted !")
+```
+`paste_delete(key)`
 
 | Argument | Type | Description |
 |---|---|---|
