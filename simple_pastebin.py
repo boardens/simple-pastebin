@@ -5,6 +5,7 @@ import mechanize
 __version__ = "1.0.0"
 
 br = mechanize.Browser()
+logged = False
 
 expire_values = [
 	"N", "10M", "1H",
@@ -76,6 +77,7 @@ format_values = [None,
 	]
 
 def login(username, password):
+	global logged
 	br.open("https://pastebin.com/login/")
 	formcount = 0
 	for frm in br.forms():  
@@ -87,6 +89,7 @@ def login(username, password):
 	br["user_password"] = password
 	br.submit()
 	if br.geturl() == "https://pastebin.com/u/"+username:
+		logged = True
 		return True
 	for i in range(1, 7):
 		if br.geturl() == "https://pastebin.com/login.php?e="+str(i):
@@ -95,8 +98,10 @@ def login(username, password):
 		return False
 
 def logout():
+	global logged
 	try:
 		br.open("https://pastebin.com/logout")
+		logged = False
 		return True
 	except Exception:
 		return False
