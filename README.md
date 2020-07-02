@@ -69,6 +69,7 @@ pastebin.paste("Hello world")
 | [`paste_details`](#paste_details) | String (list) | `key` | List all details by paste, return list. |
 | [`paste_content`](#paste_content) | String | `key` | Get paste raw content, return content. |
 | [`paste_delete`](#paste_delete) | Boolean | `key` | Delete a paste (if logged), return operation status. |
+| [`profile_details`](#profile_details) | String (list) | n/a | List all profile details (if logged), return list. |
 
 ---
 
@@ -529,6 +530,26 @@ if delete:
 | Argument | Type | Description |
 |---|---|---|
 | `key` | String | Paste url key. |
+
+---
+
+### `profile_details()`
+
+```py
+import simple_pastebin as pastebin
+
+pastebin.login("username", "password")
+profile = pastebin.profile_details()
+print(profile)
+```
+`profile_details()`
+
+#### Output
+
+```bash
+# Output as list format :
+[username, email, website, location, profile_picture]
+```
 
 ---
 
