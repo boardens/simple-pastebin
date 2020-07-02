@@ -158,6 +158,7 @@ def user_details(username):
 	content.append((details.find_all("img", {"class":"t_vi"})[0].next_sibling).replace(' ', ''))
 	content.append((details.find_all("img", {"class":"t_vi"})[1].next_sibling).replace(' ', ''))
 	content.append(details.find("span").text)
+	content.append(soup.find("img", {"class":"i_gb"}).get("src"))
 	return content
 
 def paste_details(key):
