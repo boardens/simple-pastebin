@@ -175,8 +175,8 @@ def paste_details(key):
 	return content
 
 def paste_content(key):
-	content = urlopen("https://pastebin.com/raw/"+key).read()
-	content = content.decode("utf-8")
+	soup = BeautifulSoup(br.open("https://pastebin.com/"+key), features="lxml")
+	content = soup.find("textarea", {"id":"paste_code"}).text
 	return content
 
 def paste_delete(key):
