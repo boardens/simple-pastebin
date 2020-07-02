@@ -129,7 +129,7 @@ def paste(content, name="", expire="N", exposure=0, formatting=1):
 	return br.geturl()
 
 def user_list(username, result_limit=None):
-	soup = BeautifulSoup(urlopen("https://pastebin.com/u/"+username), features="html5lib")
+	soup = BeautifulSoup(br.open("https://pastebin.com/u/"+username), features="html5lib")
 	content = []
 	table = soup.find('table', attrs={'class':'maintable'})
 	table_body = table.find('tbody')
@@ -152,7 +152,7 @@ def user_list(username, result_limit=None):
 	return content
 
 def user_details(username):
-	soup = BeautifulSoup(urlopen("https://pastebin.com/u/"+username), features="lxml")
+	soup = BeautifulSoup(br.open("https://pastebin.com/u/"+username), features="lxml")
 	details = soup.find("div", {"class":"paste_box_line_u2"})
 	content = []
 	content.append((details.find_all("img", {"class":"t_vi"})[0].next_sibling).replace(' ', ''))
@@ -162,7 +162,7 @@ def user_details(username):
 	return content
 
 def paste_details(key):
-	soup = BeautifulSoup(urlopen("https://pastebin.com/"+key), features="lxml")
+	soup = BeautifulSoup(br.open("https://pastebin.com/"+key), features="lxml")
 	details = soup.find("div", {"class":"paste_box_line2"})
 	content = []
 	content.append(soup.find("h1").text)
