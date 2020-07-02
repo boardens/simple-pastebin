@@ -22,10 +22,10 @@
 
 ```bash
 # clone the repository
-$ git clone https://github.com/boardens/simple-pastebin-wrapper.git
+$ git clone https://github.com/boardens/simple-pastebin.git
 
-# change the working directory to simple-pastebin-wrapper
-$ cd simple-pastebin-wrapper
+# change the working directory to simple-pastebin
+$ cd simple-pastebin
 
 # install python3 and python3-pip if they are not installed
 
