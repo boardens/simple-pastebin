@@ -1,4 +1,4 @@
-# simple-pastebin-wrapper
+# simple-pastebin
 🧷 Simple pastebin unofficial wrapper based on web automations.
 
 > Interact with pastebin without any API key or token.<br>
