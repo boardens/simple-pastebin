@@ -68,7 +68,7 @@ pastebin.paste("Hello world")
 | [`paste_details`](#paste_details) | String (list) | `key` | List all details by paste, return list. |
 | [`paste_content`](#paste_content) | String | `key` | Get paste raw content, return content. |
 | [`paste_delete`](#paste_delete) | Boolean | `key` | Delete a paste (if logged), return operation status. |
-| [`profile_details`](#profile_details) | String (list) | n/a | List all profile details (if logged), return list. |
+| [`profile_details`](#profile_details) | String (list) | n/a | List all profile details from current account (if logged), return list. |
 | [`trending`](#trending) | String (list) | `formatting` `result_limit` | List all trending pastes by formatting, return list. |
 
 ---
