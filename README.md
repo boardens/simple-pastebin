@@ -9,11 +9,11 @@
 - Set expiry times on pastes
 - Set public/private/unlisted status for pastes
 - See pastes by a particular user
+- Delete your pastes
 
 ### Soonly added
 
 - See trending/recents pastes
-- Delete your pastes
 - Retrieve your user details
 
 ## Get started
