@@ -187,3 +187,14 @@ def paste_delete(key):
 			return False
 	else:
 		return False
+
+def profile_details():
+	soup = BeautifulSoup(br.open("https://pastebin.com/profile"), features="lxml")
+	content = []
+	form = soup.find("form", {"id":"myform"})
+	content.append((form.find_all("div", {"class":"form_right"})[0].text)[:-16][6:])
+	content.append(form.find_all("input")[2].get("value"))
+	content.append(form.find_all("input")[3].get("value"))
+	content.append(form.find_all("input")[4].get("value"))
+	content.append(form.find_all("img")[0].get("src"))
+	return content
