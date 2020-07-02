@@ -70,6 +70,7 @@ pastebin.paste("Hello world")
 | [`paste_content`](#paste_content) | String | `key` | Get paste raw content, return content. |
 | [`paste_delete`](#paste_delete) | Boolean | `key` | Delete a paste (if logged), return operation status. |
 | [`profile_details`](#profile_details) | String (list) | n/a | List all profile details (if logged), return list. |
+| [`trending`](#trending) | String (list) | `formatting` `result_limit` | List all trending pastes by formatting, return list. |
 
 ---
 
@@ -549,6 +550,32 @@ print(profile)
 ```bash
 # Output as list format :
 [username, email, website, location, profile_picture]
+```
+
+---
+
+### `trending()`
+
+```py
+import simple_pastebin as pastebin
+
+trend = pastebin.trending("python", result_limit=5)
+print(trend)
+```
+`user_list(formatting, result_limit)`
+
+#### Optional
+
+| Argument | Type | Description |
+|---|---|---|
+| `formatting` | String | Paste code formatting. |
+| `result_limit` | Integer | Paste result return limit. |
+
+#### Output
+
+```bash
+# Output as list format :
+[[key, name, date, formatting], ...]
 ```
 
 ---
