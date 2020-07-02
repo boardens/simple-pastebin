@@ -143,6 +143,15 @@ def user_list(username, result_limit=None):
 
 	return content
 
+def user_details(username):
+	soup = BeautifulSoup(urlopen("https://pastebin.com/u/"+username), features="lxml")
+	details = soup.find("div", {"class":"paste_box_line_u2"})
+	content = []
+	content.append((details.find_all("img", {"class":"t_vi"})[0].next_sibling).replace(' ', ''))
+	content.append((details.find_all("img", {"class":"t_vi"})[1].next_sibling).replace(' ', ''))
+	content.append(details.find("span").text)
+	return content
+
 def paste_details(key):
 	soup = BeautifulSoup(urlopen("https://pastebin.com/"+key), features="lxml")
 	details = soup.find("div", {"class":"paste_box_line2"})
