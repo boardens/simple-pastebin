@@ -138,7 +138,7 @@ import simple_pastebin as pastebin
 list = pastebin.paste_details("kJApGqbK")
 print(list)
 ```
-`user_list(key)`
+`paste_details(key)`
 
 | Argument | Type | Description |
 |---|---|---|
