@@ -99,11 +99,14 @@ def login(username, password):
 
 def logout():
 	global logged
-	try:
-		br.open("https://pastebin.com/logout")
-		logged = False
-		return True
-	except Exception:
+	if logged:
+		try:
+			br.open("https://pastebin.com/logout")
+			logged = False
+			return True
+		except Exception:
+			return False
+	else:
 		return False
 
 def paste(content, name="", expire="N", exposure=0, formatting=1):
@@ -174,3 +177,13 @@ def paste_content(key):
 	content = urlopen("https://pastebin.com/raw/"+key).read()
 	content = content.decode("utf-8")
 	return content
+
+def paste_delete(key):
+	if logged:
+		try:
+			br.open("https://pastebin.com/delete/"+key)
+			return True
+		except Exception:
+			return False
+	else:
+		return False
