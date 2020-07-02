@@ -198,3 +198,26 @@ def profile_details():
 	content.append(form.find_all("input")[4].get("value"))
 	content.append(form.find_all("img")[0].get("src"))
 	return content
+
+def trending(formatting=None, result_limit=None):
+	soup = BeautifulSoup(br.open("https://pastebin.com/archive/"+str(formatting)), features="html5lib")
+	content = []
+	table = soup.find('table', attrs={'class':'maintable'})
+	table_body = table.find('tbody')
+	rows = table_body.find_all('tr')
+
+	for row in rows:
+		cols = row.find_all('td')
+		cols = [ele.text.strip() for ele in cols]
+
+		for a in row.find_all('a', href=True)[:-1]:
+			if a.text:
+				cols.insert(0, a['href'][1:])
+
+		content.append([ele for ele in cols if ele])
+
+	content = content[1:]
+	if result_limit != None:
+		del content[result_limit:len(content)]
+
+	return content
