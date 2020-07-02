@@ -65,6 +65,7 @@ pastebin.paste("Hello world")
 | [`logout`](#logout) | Boolean | n/a | Logout from current account, return operation status. |
 | [`user_list`](#user_list) | String (list) | `username` `result_limit` | List all pastes by username, return list. |
 | [`paste_details`](#paste_details) | String (list) | `key` | List all details by paste, return list. |
+| [`paste_content`](#paste_content) | String | `key` | Get paste raw content, return content. |
 | [`paste`](#paste) | String | `content` `name` `expire` `exposure` `formatting` | Publish a paste, return url. |
 
 ---
@@ -150,6 +151,22 @@ print(list)
 # Output as list format :
 [[name, username, date, expire, hits, formatting, size], ...]
 ```
+
+---
+
+### `paste_content()`
+
+```py
+import simple_pastebin as pastebin
+
+content = pastebin.paste_content("kJApGqbK")
+print(content)
+```
+`paste_content(key)`
+
+| Argument | Type | Description |
+|---|---|---|
+| `key` | String | Paste url key. |
 
 ---
 
