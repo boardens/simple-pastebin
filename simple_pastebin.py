@@ -142,3 +142,16 @@ def user_list(username, result_limit=None):
 		del content[result_limit:len(content)]
 
 	return content
+
+def paste_details(key):
+	soup = BeautifulSoup(urlopen("https://pastebin.com/"+key), features="lxml")
+	details = soup.find("div", {"class":"paste_box_line2"})
+	content = []
+	content.append(soup.find("h1").text)
+	content.append(details.find_all("a")[0].text)
+	content.append(details.find("span").text)
+	content.append((details.find("img", {"class":"t_ex"}).next_sibling)[:-4].replace(' ', ''))
+	content.append((details.find("img", {"class":"t_vi"}).next_sibling)[:-5].replace(' ', ''))
+	content.append(soup.find_all("a", {"class":"buttonsm"})[6].text)
+	content.append((soup.find("span", {"class":"h_640"}).next_sibling)[:-4].replace(' ', ''))
+	return content
