@@ -10,11 +10,11 @@
 - Set public/private/unlisted status for pastes
 - See pastes by a particular user
 - Delete your pastes
+- Retrieve your user details
 
 ### Soonly added
 
 - See trending/recents pastes
-- Retrieve your user details
 
 ## Get started
 
