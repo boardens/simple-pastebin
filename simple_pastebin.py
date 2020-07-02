@@ -154,8 +154,8 @@ def user_details(username):
 	soup = BeautifulSoup(br.open("https://pastebin.com/u/"+username), features="lxml")
 	details = soup.find("div", {"class":"paste_box_line_u2"})
 	content = []
-	content.append((details.find_all("img", {"class":"t_vi"})[0].next_sibling).replace(' ', ''))
-	content.append((details.find_all("img", {"class":"t_vi"})[1].next_sibling).replace(' ', ''))
+	content.append((details.find_all("img", {"class":"t_vi"})[0].next_sibling)[:-1][1:])
+	content.append((details.find_all("img", {"class":"t_vi"})[1].next_sibling)[:-1][1:])
 	content.append(details.find("span").text)
 	content.append(soup.find("img", {"class":"i_gb"}).get("src"))
 	return content
@@ -167,10 +167,10 @@ def paste_details(key):
 	content.append(soup.find("h1").text)
 	content.append(details.find_all("a")[0].text)
 	content.append(details.find("span").text)
-	content.append((details.find("img", {"class":"t_ex"}).next_sibling)[:-4].replace(' ', ''))
-	content.append((details.find("img", {"class":"t_vi"}).next_sibling)[:-5].replace(' ', ''))
+	content.append((details.find("img", {"class":"t_ex"}).next_sibling)[:-4][1:])
+	content.append((details.find("img", {"class":"t_vi"}).next_sibling)[:-5][1:])
 	content.append(soup.find_all("a", {"class":"buttonsm"})[6].text)
-	content.append((soup.find("span", {"class":"h_640"}).next_sibling)[:-4].replace(' ', ''))
+	content.append((soup.find("span", {"class":"h_640"}).next_sibling)[:-4][1:])
 	return content
 
 def paste_content(key):
