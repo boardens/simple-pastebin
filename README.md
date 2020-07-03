@@ -62,14 +62,14 @@ pastebin.paste("Hello world")
 |---|---|---|---|
 | [`login`](#login) | Boolean | `username` `password` | Login to a specific pastebin account, return operation status. |
 | [`logout`](#logout) | Boolean | n/a | Logout from current account, return operation status. |
-| [`user_list`](#user_list) | String (list) | `username` `result_limit` | List all pastes by username, return list. |
-| [`user_details`](#user_details) | String (list) | `username` | List all details by username, return list. |
+| [`user_list`](#user_list) | String (array) | `username` `result_limit` | List all pastes by username, return list. |
+| [`user_details`](#user_details) | String (array) | `username` | List all details by username, return list. |
 | [`paste`](#paste) | String | `content` `name` `expire` `exposure` `formatting` | Publish a paste, return url. |
-| [`paste_details`](#paste_details) | String (list) | `key` | List all details by paste, return list. |
+| [`paste_details`](#paste_details) | String (array) | `key` | List all details by paste, return list. |
 | [`paste_content`](#paste_content) | String | `key` | Get paste raw content, return content. |
 | [`paste_delete`](#paste_delete) | Boolean | `key` | Delete a paste (if logged), return operation status. |
-| [`profile_details`](#profile_details) | String (list) | n/a | List all profile details from current account (if logged), return list. |
-| [`trending`](#trending) | String (list) | `formatting` `result_limit` | List all trending pastes by formatting, return list. |
+| [`profile_details`](#profile_details) | String (array) | n/a | List all profile details from current account (if logged), return list. |
+| [`trending`](#trending) | String (array) | `formatting` `result_limit` | List all trending pastes by formatting, return list. |
 
 ---
 
