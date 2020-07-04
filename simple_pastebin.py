@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import mechanize
 
+module_name = "simple_pastebin"
 __version__ = "1.0.0"
 
 br = mechanize.Browser()
