@@ -169,7 +169,7 @@ print(p)
 ```
 `paste(content, name, expire, exposure, formatting)`
 
-> Note : if you create a paste without logging in, it will be anonymous.
+> Note : if you are not logged in, the paste will be published anonymously.
 
 | Argument | Type | Description |
 |---|---|---|
