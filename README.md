@@ -103,6 +103,8 @@ if exit:
 ```
 `logout()`
 
+> Note : this action require to be logged in.
+
 ---
 
 ### `user_list()`
@@ -527,6 +529,8 @@ if delete:
 ```
 `paste_delete(key)`
 
+> Note : this action require to be logged in.
+
 | Argument | Type | Description |
 |---|---|---|
 | `key` | String | Paste url key. |
@@ -543,6 +547,8 @@ profile = pastebin.profile_details()
 print(profile)
 ```
 `profile_details()`
+
+> Note : this action require to be logged in.
 
 #### Output
 
