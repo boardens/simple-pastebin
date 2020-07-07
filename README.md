@@ -34,14 +34,14 @@ $ python3 -m pip install -r requirements.txt
 
 ### Installation
 
-> Currently working on a setup file to facilitate installation.
+> Install the package by running setup file.
 
 ```bash
-# get site-packages directory
-$ python3 -m site --user-site
+# install package
+$ python3 setup.py install
 
-# copy script to site-packages directory
-$ cp simple_pastebin.py {site-packages}
+# check if package is correctly installed
+$ python3 -m pip show simple_pastebin
 ```
 
 ### Usage
