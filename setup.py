@@ -1,12 +1,11 @@
 import setuptools
-import simple_pastebin.__init__ as init
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="simple_pastebin",
-    version=init.__version__,
+    version="0.1.0",
     description="Simple pastebin unofficial wrapper based on web automations.",
     long_description=long_description,
     long_description_content_type="text/markdown",
