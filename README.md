@@ -46,6 +46,8 @@ $ cp simple_pastebin.py {site-packages}
 
 ### Usage
 
+> Learn about usage by reading [documentation](/DOCUMENTATION.md).
+
 ```py
 # import library
 import simple_pastebin as pastebin
