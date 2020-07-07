@@ -1,2 +1,3 @@
+setuptools
 mechanize
 bs4
