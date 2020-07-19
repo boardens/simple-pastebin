@@ -63,6 +63,11 @@ Currently working on other major implementations like :
 - Improving and simplifying functions argumentations (especially ids and values)
 - Adding paste gestion for connected members
 
+## Legal
+
+**Disclaimer**: This is not affliated, endorsed or certified in any way by Pastebin.<br>
+This is an independent and unofficial work. Strictly not for spam. Use at your own risk.
+
 ## License
 
 [GPL-3.0](https://github.com/boardens/watson/LICENSE/) License
