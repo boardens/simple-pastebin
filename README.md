@@ -5,7 +5,7 @@
 > Lightweight alternative to [PyPI Pastebin API](https://pypi.org/project/Pastebin/).
 
 > ⚠️ This version is deprecated and no longer working !<br>
-> Currently working on a new version.
+> Currently working on a patch to fix automations.
 
 ### Features
 
