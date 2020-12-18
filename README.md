@@ -4,6 +4,9 @@
 > Interact with pastebin without any API key or token.<br>
 > Lightweight alternative to [PyPI Pastebin API](https://pypi.org/project/Pastebin/).
 
+> ⚠️ This version is deprecated and no longer working !<br>
+> Currently working on a new version.
+
 ### Features
 
 - Paste, either logged in or anonymously
