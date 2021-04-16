@@ -106,7 +106,7 @@ def logout():
 	else:
 		return False
 
-def create_paste(content, name="", expire="N", exposure=0, formatting=1):
+def paste(content, name="", expire="N", exposure=0, formatting=1):
 	if formatting is None:
 		formatting = 1
 	if formatting in format_values:
