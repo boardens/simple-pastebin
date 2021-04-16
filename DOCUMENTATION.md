@@ -51,15 +51,15 @@ if exit:
 
 ---
 
-### `user_list()`
+### `get_user_list()`
 
 ```py
 import simple_pastebin as pastebin
 
-list = pastebin.user_list("username", result_limit=5)
+list = pastebin.get_user_list("username", result_limit=5)
 print(list)
 ```
-`user_list(username, result_limit)`
+`get_user_list(username, result_limit)`
 
 | Argument | Type | Description |
 |---|---|---|
@@ -80,15 +80,15 @@ print(list)
 
 ---
 
-### `user_details()`
+### `get_user_details()`
 
 ```py
 import simple_pastebin as pastebin
 
-list = pastebin.user_details("username")
+list = pastebin.get_user_details("username")
 print(list)
 ```
-`user_details(username)`
+`get_user_details(username)`
 
 | Argument | Type | Description |
 |---|---|---|
@@ -422,15 +422,15 @@ print(p)
 
 ---
 
-### `paste_details()`
+### `get_paste_details()`
 
 ```py
 import simple_pastebin as pastebin
 
-list = pastebin.paste_details("kJApGqbK")
+list = pastebin.get_paste_details("kJApGqbK")
 print(list)
 ```
-`paste_details(key)`
+`get_paste_details(key)`
 
 | Argument | Type | Description |
 |---|---|---|
@@ -445,15 +445,15 @@ print(list)
 
 ---
 
-### `paste_content()`
+### `get_paste_content()`
 
 ```py
 import simple_pastebin as pastebin
 
-content = pastebin.paste_content("kJApGqbK")
+content = pastebin.get_paste_content("kJApGqbK")
 print(content)
 ```
-`paste_content(key)`
+`get_paste_content(key)`
 
 | Argument | Type | Description |
 |---|---|---|
@@ -461,17 +461,17 @@ print(content)
 
 ---
 
-### `paste_delete()`
+### `delete_paste()`
 
 ```py
 import simple_pastebin as pastebin
 
 pastebin.login("username", "password")
-delete = pastebin.paste_delete("kJApGqbK")
+delete = pastebin.delete_paste("kJApGqbK")
 if delete:
   print("Paste deleted !")
 ```
-`paste_delete(key)`
+`delete_paste(key)`
 
 > Note : this action require to be logged in.
 
@@ -481,16 +481,16 @@ if delete:
 
 ---
 
-### `profile_details()`
+### `get_profile_details()`
 
 ```py
 import simple_pastebin as pastebin
 
 pastebin.login("username", "password")
-profile = pastebin.profile_details()
+profile = pastebin.get_profile_details()
 print(profile)
 ```
-`profile_details()`
+`get_profile_details()`
 
 > Note : this action require to be logged in.
 
@@ -503,15 +503,15 @@ print(profile)
 
 ---
 
-### `trending()`
+### `get_trends()`
 
 ```py
 import simple_pastebin as pastebin
 
-trend = pastebin.trending("python", result_limit=5)
+trend = pastebin.get_trends("python", result_limit=5)
 print(trend)
 ```
-`user_list(formatting, result_limit)`
+`get_trends(formatting, result_limit)`
 
 #### Optional
 
@@ -554,7 +554,7 @@ log = pastebin.login(username, password)
 
 if log:
   print("Connected as "+username)
-  list = pastebin.user_list(username)
+  list = pastebin.get_user_list(username)
 
   for i in range(len(list)):
     print(list[i][1])
