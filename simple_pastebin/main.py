@@ -106,7 +106,7 @@ def logout():
 	else:
 		return False
 
-def paste(content, name="", expire="N", exposure=0, formatting=1):
+def create_paste(content, name="", expire="N", exposure=0, formatting=1):
 	if formatting is None:
 		formatting = 1
 	if formatting in format_values:
@@ -123,7 +123,7 @@ def paste(content, name="", expire="N", exposure=0, formatting=1):
 	br.submit()
 	return br.geturl()
 
-def user_list(username, result_limit=None):
+def get_user_list(username, result_limit=None):
 	soup = BeautifulSoup(br.open("https://pastebin.com/u/"+username), features="html5lib")
 	content = []
 	table = soup.find('table', attrs={'class':'maintable'})
@@ -146,7 +146,7 @@ def user_list(username, result_limit=None):
 
 	return content
 
-def user_details(username):
+def get_user_details(username):
 	soup = BeautifulSoup(br.open("https://pastebin.com/u/"+username), features="lxml")
 	details = soup.find("div", {"class":"paste_box_line_u2"})
 	content = []
@@ -156,7 +156,7 @@ def user_details(username):
 	content.append(soup.find("img", {"class":"i_gb"}).get("src"))
 	return content
 
-def paste_details(key):
+def get_paste_details(key):
 	soup = BeautifulSoup(br.open("https://pastebin.com/"+key), features="lxml")
 	details = soup.find("div", {"class":"paste_box_line2"})
 	content = []
@@ -169,12 +169,12 @@ def paste_details(key):
 	content.append((soup.find("span", {"class":"h_640"}).next_sibling)[:-4][1:])
 	return content
 
-def paste_content(key):
+def get_paste_content(key):
 	soup = BeautifulSoup(br.open("https://pastebin.com/"+key), features="lxml")
 	content = soup.find("textarea", {"id":"paste_code"}).text
 	return content
 
-def paste_delete(key):
+def delete_paste(key):
 	if logged:
 		try:
 			br.open("https://pastebin.com/delete/"+key)
@@ -184,7 +184,7 @@ def paste_delete(key):
 	else:
 		return False
 
-def profile_details():
+def get_profile_details():
 	soup = BeautifulSoup(br.open("https://pastebin.com/profile"), features="lxml")
 	content = []
 	form = soup.find("form", {"id":"myform"})
@@ -195,7 +195,7 @@ def profile_details():
 	content.append(form.find_all("img")[0].get("src"))
 	return content
 
-def trending(formatting=None, result_limit=None):
+def get_trends(formatting=None, result_limit=None):
 	soup = BeautifulSoup(br.open("https://pastebin.com/archive/"+str(formatting)), features="html5lib")
 	content = []
 	table = soup.find('table', attrs={'class':'maintable'})
