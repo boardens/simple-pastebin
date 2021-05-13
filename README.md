@@ -73,4 +73,4 @@ This is an independent and unofficial work. Strictly not for spam. Use at your o
 
 ## License
 
-[GPL-3.0](https://github.com/boardens/watson/LICENSE/) License
+[GPL-3.0](https://github.com/boardens/simple-pastebin/LICENSE/) License
